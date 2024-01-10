@@ -415,7 +415,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1px;
+  /* padding: 1px; */
   font-size: smaller;
   font-stretch: condensed;
   word-spacing: normal;
