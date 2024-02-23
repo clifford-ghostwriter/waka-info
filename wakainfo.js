@@ -3,8 +3,17 @@ const submitBtn = document.querySelector(".btn");
 const option = document.getElementsByTagName("option");
 let map = L.map("map");
 let countryCountainer = document.querySelector(".country-container");
+const copyright = document.querySelector(".copyright");
+console.log(copyright, option);
 let closeBtn;
-// map = L.map("map").setView(coords, 15);
+// map = L.map("map").setView(coords, 15);d
+
+const d = new Date();
+let year = d.getFullYear();
+
+copyright.innerHTML = `&copy;${year} Wakainfo, All Right Reserved`;
+
+console.log(copyright, option, year);
 
 // LOADMAP
 const loadMap = function (position) {
