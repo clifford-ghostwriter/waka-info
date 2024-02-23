@@ -4,7 +4,7 @@ const option = document.getElementsByTagName("option");
 let map = L.map("map");
 let countryCountainer = document.querySelector(".country-container");
 const copyright = document.querySelector(".copyright");
-console.log(copyright, option);
+console.log(copyright, option, countryCountainer);
 let closeBtn;
 // map = L.map("map").setView(coords, 15);d
 
