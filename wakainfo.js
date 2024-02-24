@@ -1,10 +1,10 @@
 const country = document.querySelector("#country-data");
-const submitBtn = document.querySelector(".btn");
+const submitBtn = document.querySelector(".submit-Btn");
 const option = document.getElementsByTagName("option");
 let map = L.map("map");
-let countryCountainer = document.querySelector(".country-container");
+let countryContainer = document.querySelector(".country-container");
 const copyright = document.querySelector(".copyright");
-console.log(copyright, option, countryCountainer);
+console.log(copyright, option, countryContainer);
 let closeBtn;
 // map = L.map("map").setView(coords, 15);d
 
@@ -69,10 +69,10 @@ const renderCountry = function (country, neigb) {
     </div>
    
   </article>`;
-  countryCountainer.innerHTML = html;
+  countryContainer.innerHTML = html;
 };
 
-countryCountainer.addEventListener("click", function (e) {
+countryContainer.addEventListener("click", function (e) {
   const element = e.target;
   if (element.className === "close-btn") {
     element.parentElement.parentElement.style.display = "none";
@@ -93,7 +93,7 @@ const renderMarker = function (data) {
         autoClose: true,
         closeOnClick: true,
         className: "marker",
-        closeButton: false,
+        closeButton: true,
       })
     )
     .setPopupContent(data.capital[0])
@@ -179,7 +179,6 @@ map.on("click", function (mapEvent) {
       // renderMarker(data);
     });
 });
-
 // fetch(`https://restcountries.com/v3.1/name/United States of America`)
 //   .then(function (response) {
 //     return response.json();

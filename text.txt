@@ -1,0 +1,567 @@
+:root {
+ margin: 0;
+ --blue: #0000ff;
+ --white: #ffffff;
+ --brunswick-green: #194D3C;
+ --picton-blue: #45a3d9;
+ --dark-green: #0f2e25;
+ --black: #000000;
+ --navy-blue: #05445e;
+ --baby-blue: #d4f1f4;
+ --red: #ff0000;
+ --yellow-green: #9acd32;
+ --yellow: #ffff00;
+ /* padding: 2px; */
+ box-sizing: border-box;
+}
+
+body,
+html {
+ margin: 0;
+ padding: 0;
+ /* height: 100%; */
+ /* width: 100%; */
+ box-sizing: border-box;
+ font-family: Verdana, sans-serif;
+ font-size: 15px;
+ line-height: 1.5;
+ /* overflow: hidden; */
+}
+
+.section-main {
+ display: grid;
+ grid-template-columns: 4fr 2fr;
+ min-height: 100vh;
+ /* width: 100vw; */
+ margin: 0;
+ position: relative;
+ /* overflow: hidden; */
+ /* border: 2px solid red; */
+}
+
+
+#map {
+ height: 100%;
+ width: 100%;
+ /* right: 0; */
+ /* border: 1px solid red; */
+}
+
+.form-container {
+ background-color: var(--navy-blue);
+ height: 100%;
+ color: var(--white);
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ padding: 5px;
+ /* width: 100%; */
+ position: relative;
+ /* border: 2px solid red; */
+
+
+
+}
+
+.country-form {
+ display: flex;
+ width: 100%;
+ margin-top: 70%;
+ right: 0;
+ /* position: absolute; */
+ /* border: 2px solid blue; */
+
+}
+
+.writer-info {
+ position: absolute;
+ margin-top: 70%;
+ border: 2px solid blue;
+
+}
+
+.country-container {
+ top: 10%;
+ left: 50%;
+ transform: translatex(-50%);
+ position: absolute;
+ z-index: 1000;
+ display: grid;
+ justify-content: space-around;
+ height: 1000px;
+ border: 5px solid blue;
+
+}
+
+.country-info {
+ background-color: var(--navy-blue);
+ border: 1px solid var(--black);
+ /* position: absolute; */
+ color: white;
+ min-height: auto;
+ border-radius: 5px;
+ /* overflow: scroll; */
+ box-shadow: var(--black);
+ /* border: 2px solid pink; */
+}
+
+.close-btn {
+ position: absolute;
+ top: 0%;
+ right: 0%;
+ color: var(--black);
+ height: 25px;
+ width: 25px;
+ background-color: var(--white);
+ cursor: pointer;
+}
+
+.country-data {
+ display: grid;
+ justify-content: space-around;
+ flex-basis: 70%;
+}
+
+.marker {
+ background-color: var(--dark-green);
+ color: #ff0000;
+ border: 5px solid var(--brunswick-green);
+ padding: 0%;
+ font-size: 2em;
+ opacity: 0.5;
+}
+
+.airbnb {
+ color: var(--yellow);
+ cursor: pointer;
+}
+
+.country-image {
+ /* flex-basis: 30%; */
+ position: relative;
+}
+
+
+
+
+/* MEDIA QUEERY */
+
+/* Smartphones start somewhere around here */
+@media (min-width: 300px) {
+
+ body,
+ html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow: hidden;
+  position: relative;
+ }
+
+ .section-main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  /* width: 100vw; */
+ }
+
+ #map {
+  max-height: 70%;
+  width: 100%;
+ }
+
+ .form-container {
+  /* max-height: 30%; */
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  padding: 1px;
+  font-size: smaller;
+  font-stretch: condensed;
+  word-spacing: normal;
+ }
+
+ .country-form {
+  display: block;
+  width: 100%;
+  padding-left: 0px;
+  margin-top: 0;
+ }
+
+ /* .btn {
+  display: block;
+ } */
+
+ .writer-info {
+  margin-top: 60%;
+ }
+
+ .country-container {
+  /* top: 9%; */
+  /* left: 5%; */
+  /* position: absolute; */
+  z-index: 1000;
+  display: grid;
+  justify-content: space-around;
+  border: 1px solid blue;
+
+ }
+
+ .country-info {
+  overflow: scroll;
+  height: 550px;
+  width: 270px;
+  font-size: smaller;
+ }
+}
+
+
+/* You might do landscape phones here if your content seems to need it */
+@media (min-width: 370px) {
+ .section-main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* width: 100%; */
+  /* height: 100vh; */
+  /* width: 100vw; */
+
+ }
+
+ #map {
+  max-height: 70%;
+  width: 100%;
+ }
+
+ .form-container {
+  /* max-height: 30%; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1px;
+  font-size: smaller;
+  font-stretch: condensed;
+  word-spacing: normal;
+ }
+
+ .country-form {
+  display: block;
+  width: 100%;
+  padding-left: 0px;
+  margin-top: 0;
+ }
+
+ .btn {
+  display: block;
+ }
+
+ .writer-info {
+  margin-top: 36%;
+ }
+
+ .country-container {
+  /* top: 8%; */
+  /* left: 15%; */
+  /* position: absolute; */
+  z-index: 1000;
+  display: grid;
+  justify-content: space-around;
+
+ }
+
+ .country-info {
+  overflow: scroll;
+  height: 550px;
+  width: 280px;
+  font-size: smaller;
+ }
+}
+
+/* Starting into tablets somewhere in here */
+@media (min-width: 600px) {
+ .section-main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* width: 100%;
+  height: 100vh;
+  width: 100vw; */
+
+ }
+
+ #map {
+  max-height: 70%;
+  width: 100%;
+ }
+
+ .form-container {
+  /* max-height: 30%; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1px;
+  font-size: smaller;
+  font-stretch: condensed;
+  word-spacing: normal;
+ }
+
+ .country-form {
+  display: block;
+  width: 100%;
+  padding-left: 0px;
+  margin-top: 0;
+ }
+
+ .btn {
+  display: block;
+ }
+
+ .writer-info {
+  margin-top: 25%;
+ }
+
+ .country-container {
+  /* top: 8%; */
+  /* left: 35%; */
+  /* position: absolute; */
+  z-index: 1000;
+  display: grid;
+  justify-content: space-around;
+
+ }
+
+ .country-info {
+  /* overflow: scroll; */
+  height: 550px;
+  width: 280px;
+  font-size: smaller;
+ }
+}
+
+/* Perhaps bigger tablets */
+@media (min-width: 850px) {
+ .section-main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* width: 100%; */
+  min-height: 100vh;
+  /* width: 100vw; */
+
+ }
+
+ #map {
+  max-height: 70%;
+  width: 100%;
+ }
+
+ .form-container {
+  max-height: 30%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1px;
+  font-size: smaller;
+  font-stretch: condensed;
+  word-spacing: normal;
+ }
+
+ .country-form {
+  display: block;
+  width: 100%;
+  padding-left: 0px;
+  margin-top: 0;
+ }
+
+ .btn {
+  display: block;
+ }
+
+ .writer-info {
+  margin-top: 20%;
+ }
+
+ .country-container {
+  /* top: 8%; */
+  /* left: 25%; */
+  /* position: absolute; */
+  z-index: 1000;
+  display: grid;
+  justify-content: space-around;
+
+ }
+
+ .country-info {
+  /* overflow: scroll; */
+  height: 550px;
+  width: 280px;
+  font-size: smaller;
+ }
+}
+
+/* Desktop screen or landscape tablet */
+@media (min-width: 1050px) {
+ .section-main {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  width: 100vw;
+
+ }
+
+ #map {
+  max-height: 100%;
+  width: 100%;
+ }
+
+ .form-container {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* padding: 1px; */
+  font-size: smaller;
+  font-stretch: condensed;
+  word-spacing: normal;
+ }
+
+ .country-form {
+  display: block;
+  width: 100%;
+  padding-left: 0px;
+  margin-top: 0;
+ }
+
+ .btn {
+  display: block;
+ }
+
+ .writer-info {
+  margin-top: 36%;
+ }
+
+ .country-container {
+  /* top: 8%; */
+  /* left: 15%; */
+  /* position: absolute; */
+  z-index: 1000;
+  display: grid;
+  justify-content: space-around;
+
+ }
+
+ .country-info {
+  overflow: scroll;
+  height: 550px;
+  width: 280px;
+  font-size: smaller;
+ }
+}
+
+/* A bit bigger if you need some adjustments around here */
+@media (min-width: 1100px) {}
+
+/* Widescreens */
+@media (min-width: 1500px) {}
+
+
+
+/* @media (min-width: 800px) {
+ .country-form {
+  display: block;
+  width: 100%;
+  margin-top: 70%;
+  padding-left: 0px;
+  margin-top: 80%;
+ }
+
+ .writer-info {
+  margin-top: 55%;
+ }
+
+ .country-info {
+  overflow: scroll;
+ }
+}
+
+
+@media (max-width: 800px) {
+ .section-main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+ }
+
+ #map {
+  max-height: 70%;
+  width: 100%;
+ }
+
+ .form-container {
+  max-height: 30%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1px;
+ }
+
+ .country-form {
+  display: block;
+  width: 100%;
+  padding-left: 2px;
+  margin-top: 0;
+ }
+
+ .writer-info {
+  margin-top: 33%;
+ }
+
+ .country-container {
+  top: 3%;
+  left: 12%;
+  position: absolute;
+  z-index: 1000;
+  display: grid;
+  justify-content: space-around;
+
+ }
+
+ .country-info {
+  background-color: var(--navy-blue);
+  border: 2px solid var(--black);
+  position: absolute;
+  color: white;
+  min-height: auto;
+  border-radius: 5px;
+  overflow: scroll;
+  box-shadow: 1px 1px var(--white);
+  height: 600px;
+  width: 300px;
+  scrollbar-color: var(--white);
+
+ }
+
+}
+
+@media (min-width: 1200px) {
+ .country-form {
+  display: block;
+  width: 100%;
+  margin-top: 70%;
+  padding-left: 0px;
+ }
+
+ .writer-info {
+  margin-top: 50%;
+ } 
+}*/
