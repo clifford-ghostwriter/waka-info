@@ -65,7 +65,7 @@
  --transition: all 0.3s linear;
  --spacing: 0.1rem;
  --radius: 0.25rem;
- --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ --light-shadow: 15px 5px 15px rgba(235, 220, 231, 0.1);
  --mid-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
  --max-width: 1170px;
@@ -163,14 +163,14 @@ html {
 
 .section-main {
  /* border: 3px solid black; */
- height: 100dvh;
+ height: 100%;
 }
 
 .section-center {
  /* border: 2px solid blue; */
  display: grid;
  grid-template-rows: 5fr 3fr;
- min-height: 100vh;
+ height: 100vh;
 }
 
 
@@ -237,6 +237,7 @@ html {
  cursor: pointer;
  /* display: inline-block; */
  letter-spacing: var(--spacing);
+ text-transform: capitalize;
 
 }
 
@@ -255,7 +256,12 @@ html {
  align-content: end;
  padding: var(--size--50);
  color: white;
- border: 1px solid white;
+ /* border: 1px solid white; */
+ gap: 0;
+}
+
+.writer-info>*:last-child {
+ /* margin-top: -0.1rem; */
 }
 
 .country-info-btn {
@@ -267,20 +273,26 @@ html {
  /* min-height: 0; */
  color: white;
  padding: 0;
+ text-decoration: underline;
 
 }
 
 
 .country-container {
  background-color: var(--black);
+ /* background-color: transparent; */
  position: absolute;
  /* border: 1px solid red; */
- top: 2rem;
+ top: 0.8rem;
  z-index: 9999;
  color: white;
  /* margin-inline: auto; */
  /* transform: translateX(3rem); */
- left: 25%;
+ /* left: 20vw; */
+ left: 50%;
+ transform: translateX(-50%);
+ min-width: max-content;
+ box-shadow: var(--light-shadow);
 
 
 }
@@ -298,12 +310,14 @@ html {
  top: 0;
  right: 0;
  border: transparent;
+ cursor: auto;
 }
 
 .country-data {
  /* border: 1px solid red; */
  margin-inline: auto;
  padding: 1rem;
+ /* overflow-y: scroll; */
 
 }
 
@@ -314,4 +328,6 @@ html {
 
 .airbnb {}
 
-.country-image {}
+.country-image {
+ border-bottom: 1px solid white;
+}

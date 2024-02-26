@@ -4,7 +4,7 @@ const option = document.getElementsByTagName("option");
 let map = L.map("map");
 let countryContainer = document.querySelector(".country-container");
 const copyright = document.querySelector(".copyright");
-console.log(copyright, option, countryContainer);
+// console.log(copyright, option, countryContainer);
 let closeBtn;
 // map = L.map("map").setView(coords, 15);d
 
@@ -13,7 +13,7 @@ let year = d.getFullYear();
 
 copyright.innerHTML = `&copy;${year} Wakainfo, All Right Reserved`;
 
-console.log(copyright, option, year);
+// console.log(copyright, option, year);
 
 // LOADMAP
 const loadMap = function (position) {
@@ -76,7 +76,7 @@ countryContainer.addEventListener("click", function (e) {
   const element = e.target;
   if (element.className === "close-btn") {
     element.parentElement.parentElement.style.display = "none";
-  } else if (element.classList.contains("airbnb")) {
+  } else if (element.classList.contains("country-info-btn")) {
     alert("currently unavailable");
   }
 });
