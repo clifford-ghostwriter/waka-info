@@ -151,26 +151,26 @@ body,
 html {
  margin: 0;
  padding: 0;
- min-height: 100vh;
+ min-height: 100dvh;
  /* width: 100%; */
  /* box-sizing: border-box; */
  /* font-family: Verdana, sans-serif; */
  /* font-size: 15px; */
  /* line-height: 1.5; */
- /* overflow: hidden; */
+ overflow: hidden;
  /* background-color: yellow; */
 }
 
 .section-main {
  /* border: 3px solid black; */
- height: 100vh;
+ height: 100dvh;
 }
 
 .section-center {
  /* border: 2px solid blue; */
  display: grid;
  grid-template-rows: 5fr 3fr;
- min-height: 100%;
+ min-height: 100vh;
 }
 
 
@@ -255,6 +255,7 @@ html {
  align-content: end;
  padding: var(--size--50);
  color: white;
+ border: 1px solid white;
 }
 
 .country-info-btn {
