@@ -60,12 +60,12 @@ const renderCountry = function (country, neigb) {
       <p class="country-row">
         <span >Language: </span>${country.languages[language]}
       </p>
-      <p class="country-row airbnb">Attractions, Hotels and Airbnb
-      </p>
-      <p class="country-row airbnb">Schools
-      </p>
-      <p class="country-row airbnb">Hospitals
-      </p>
+      <button class="country-info-btn airbnb">Attractions, Hotels and Airbnb
+      </button>
+      <button class="country-info-btn schools">Schools
+      </button>
+      <button class="country-info-btn hospital">Hospitals
+      </button>
     </div>
    
   </article>`;
