@@ -253,7 +253,7 @@ html {
 
 .writer-info {
  display: grid;
- align-content: end;
+ align-content: flex-start;
  padding: var(--size--50);
  color: white;
  /* border: 1px solid white; */
